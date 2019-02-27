@@ -1,21 +1,23 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("a_example.in")));
+        Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(new FileInputStream("a_example.in"))));
         PrintWriter printWriter = new PrintWriter("a_submit.txt", "UTF-8");
 
-        List<String> list = new ArrayList<>();
-        String s;
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int C = scanner.nextInt();
+        int D = scanner.nextInt();
+        int E = scanner.nextInt();
+        int F = scanner.nextInt();
 
-        for (; (s = bufferedReader.readLine()) != null; ){
-            list.add(s);
-        }
-        bufferedReader.close();
+        scanner.close();
 
         // Algorithm here
 
@@ -25,13 +27,13 @@ public class Main {
 
 
 
+        printWriter.println("A = " + A);
+        printWriter.println("B = " + B);
+        printWriter.println("C = " + C);
+        printWriter.println("D = " + D);
+        printWriter.println("E = " + E);
+        printWriter.println("F = " + F);
 
-
-
-        for (int i = 0; i < list.size(); i++) {
-            printWriter.println(list.get(i));
-            System.out.println(list.get(i));
-        }
         printWriter.close();
 
     }
